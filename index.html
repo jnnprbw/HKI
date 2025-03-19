@@ -127,6 +127,17 @@
         </div>
     </footer>
 
+    <!-- Chatbot Widget di pojok kanan bawah -->
+  <div class="fixed bottom-4 right-4 z-50">
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+      
+      createChat({
+        webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
+      });
+    </script>
+  </div>
+
     <script>
         const burgerIcon = document.getElementById("burger-icon");
         const mobileMenu = document.getElementById("mobile-menu");
