@@ -123,8 +123,7 @@
       <button id="closeChatbot" class="text-white text-2xl font-bold">&times;</button>
     </div>
     <div class="flex-1 overflow-auto">
-   <div id="chatbot-container" class="w-full h-full"></div>
-
+      <iframe id="chatIframe" src="" class="w-full h-full border-0"></iframe>
     </div>
   </div>
 
@@ -143,7 +142,7 @@
 
     openChatbot.addEventListener('click', () => {
       chatbotFull.classList.remove('hidden');
-      chatIframe.src = 'https://nichristandy.app.n8n.cloud/webhook/4a212c7a-639d-4409-8615-01da76441d1b/chat';
+      chatIframe.src = 'https://sithki.app.n8n.cloud/webhook/4b83e5c2-911d-4a9e-aa8a-88faf6c4b7d6/chat';
     });
 
     closeChatbot.addEventListener('click', () => {
