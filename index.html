@@ -1,23 +1,29 @@
+buat saat menekan ikon chatbot, halaman chatbot menjadi full
+
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HKInfrastruktur</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Sertakan CSS Chatbot -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-50">
 
   <!-- HEADER -->
-  <header class="bg-gradient-to-r from-slate-800 to-slate-600 text-white py-4 shadow-md sticky top-0 z-50">
+
+  <header class="bg-gradient-to-r from-slate-800 to-slate-600 text-white py-4 shadow-md sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
       <div class="text-3xl font-bold tracking-wide">HKInfrastruktur</div>
       <nav class="hidden md:block">
         <ul class="flex space-x-8 text-lg font-medium">
-          <li><a href="#home" class="hover:text-orange-300">Beranda</a></li>
-          <li><a href="#about" class="hover:text-orange-300">Tentang Kami</a></li>
-          <li><a href="#services" class="hover:text-orange-300">Layanan</a></li>
-          <li><a href="#contact" class="hover:text-orange-300">Kontak</a></li>
+          <li><a href="#home" class="hover:text-orange-300 transition duration-200">Beranda</a></li>
+          <li><a href="#about" class="hover:text-orange-300 transition duration-200">Tentang Kami</a></li>
+          <li><a href="#services" class="hover:text-orange-300 transition duration-200">Layanan</a></li>
+          <li><a href="#contact" class="hover:text-orange-300 transition duration-200">Kontak</a></li>
         </ul>
       </nav>
       <div class="md:hidden flex items-center">
@@ -31,6 +37,7 @@
   </header>
 
   <!-- Mobile Menu -->
+
   <nav id="mobile-menu" class="md:hidden bg-slate-700 text-white py-4 hidden">
     <ul class="flex flex-col space-y-4 text-lg px-4">
       <li><a href="#home" class="hover:text-orange-400">Beranda</a></li>
@@ -41,6 +48,7 @@
   </nav>
 
   <!-- HERO SECTION -->
+
   <section id="home" class="bg-cover bg-center h-screen relative" style="background-image: url('kontruksi.webp');">
     <div class="absolute inset-0 bg-black opacity-40"></div>
     <div class="max-w-7xl mx-auto px-4 py-32 text-center text-white relative z-10">
@@ -51,16 +59,23 @@
   </section>
 
   <!-- ABOUT SECTION -->
+
   <section id="about" class="py-20 bg-gradient-to-r from-slate-700 to-orange-600 text-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div class="relative overflow-hidden rounded-lg">
-          <img src="alatberat.webp" alt="Tentang Kami" class="rounded-lg shadow-lg w-full h-auto transform transition duration-500 hover:scale-105">
+        <!-- Image Section -->
+        <div class="relative group overflow-hidden rounded-lg">
+          <img src="alatberat.webp" alt="Tentang Kami - Peternakan Sejahtera" class="rounded-lg shadow-lg w-full h-auto transform transition duration-500 group-hover:scale-105">
         </div>
+        <!-- Text Section -->
         <div class="text-center md:text-left">
           <h2 class="text-4xl font-semibold mb-6">Tentang Kami</h2>
-          <p class="text-lg leading-relaxed">Lorem Ipsum telah berkomitmen sejak tahun 1995 Lorem Ipsum is simply dummy text...</p>
-          <p class="text-lg mt-4 leading-relaxed">Kami menyediakan berbagai produk seperti <span class="font-semibold text-orange-500">Lorem Ipsum</span></p>
+          <p class="text-lg leading-relaxed">
+            <span class="font-bold">Lorem Ipsum</span> telah berkomitmen sejak tahun <span class="font-bold">1995</span> Lorem Ipsum is simply dummy text...
+          </p>
+          <p class="text-lg mt-4 leading-relaxed">
+            Kami menyediakan berbagai produk seperti <span class="font-semibold text-orange-500">Lorem Ipsum</span>, Lorem Ipsum
+          </p>
           <div class="mt-6">
             <a href="#services" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg shadow-lg text-lg hover:bg-orange-600 transition duration-300 ease-in-out">Pelajari Lebih Lanjut</a>
           </div>
@@ -70,84 +85,75 @@
   </section>
 
   <!-- SERVICES SECTION -->
+
   <section id="services" class="py-20 bg-gradient-to-r from-orange-500 to-slate-700 text-white">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <h2 class="text-4xl font-semibold mb-8">Layanan Kami</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="gambar1.webp" alt="Layanan 1" class="w-full h-48 object-cover rounded-t-lg">
-          <h3 class="text-xl font-semibold mt-4">Layanan 1</h3>
+        <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+          <img src="gambar1.webp" alt="Daging Segar" class="w-full h-48 object-cover rounded-t-lg">
+          <h3 class="text-xl font-semibold mt-4">Daging Segar</h3>
           <p class="text-gray-600 mt-2">Lorem Ipsum</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="gambar2.webp" alt="Layanan 2" class="w-full h-48 object-cover rounded-t-lg">
-          <h3 class="text-xl font-semibold mt-4">Layanan 2</h3>
-          <p class="text-gray-600 mt-2">Lorem Ipsum</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+          <img src="gambar2.webp" alt="Susu Segar" class="w-full h-48 object-cover rounded-t-lg">
+          <h3 class="text-xl font-semibold mt-4">Susu Segar</h3>
+          <p class="text-gray-600 mt-2">Lorem Ipsum.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="gambar3.webp" alt="Layanan 3" class="w-full h-48 object-cover rounded-t-lg">
-          <h3 class="text-xl font-semibold mt-4">Layanan 3</h3>
-          <p class="text-gray-600 mt-2">Lorem Ipsum</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+          <img src="gambar3.webp" alt="Telur Organik" class="w-full h-48 object-cover rounded-t-lg">
+          <h3 class="text-xl font-semibold mt-4">Telur Organik</h3>
+          <p class="text-gray-600 mt-2">Lorem Ipsum.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
+
   <section id="contact" class="py-20 bg-slate-700 text-white">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <h2 class="text-4xl font-semibold mb-8">Kontak Kami</h2>
-      <p class="text-lg mb-4">Kami senang mendengar dari Anda! Hubungi kami jika ada pertanyaan.</p>
-      <form class="space-y-6 max-w-xl mx-auto">
-        <input type="text" placeholder="Nama Anda" class="w-full p-4 rounded-lg border border-gray-300" required>
-        <input type="email" placeholder="Email Anda" class="w-full p-4 rounded-lg border border-gray-300" required>
-        <textarea rows="4" placeholder="Pesan Anda" class="w-full p-4 rounded-lg border border-gray-300" required></textarea>
+      <p class="text-lg mb-4">Kami senang mendengar dari Anda! Jika Anda memiliki pertanyaan atau ingin memesan produk, silakan hubungi kami.</p>
+      <form action="#" method="POST" class="space-y-6 max-w-xl mx-auto">
+        <input type="text" name="name" placeholder="Nama Anda" class="w-full p-4 rounded-lg border border-gray-300" required>
+        <input type="email" name="email" placeholder="Email Anda" class="w-full p-4 rounded-lg border border-gray-300" required>
+        <textarea name="message" rows="4" placeholder="Pesan Anda" class="w-full p-4 rounded-lg border border-gray-300" required></textarea>
         <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-black px-6 py-3 rounded-lg text-xl">Kirim Pesan</button>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
+
   <footer class="bg-slate-800 text-white py-6">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p class="text-lg">© 2025 HKInfrastruktur | Semua hak cipta dilindungi.</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="#" class="hover:text-orange-400">Facebook</a>
+        <a href="#" class="hover:text-orange-400">Instagram</a>
+        <a href="#" class="hover:text-orange-400">Twitter</a>
+      </div>
     </div>
   </footer>
 
-  <!-- CHATBOT FULLSCREEN -->
-  <button id="openChatbot" class="fixed bottom-4 right-4 z-50 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg">Chatbot AI</button>
+  <!-- Chatbot Widget di pojok kanan bawah -->
 
-  <div id="chatbotFull" class="fixed inset-0 bg-white z-[9999] hidden flex flex-col">
-    <div class="flex justify-between items-center p-4 bg-slate-800 text-white">
-      <h2 class="text-xl font-bold">Chatbot AI</h2>
-      <button id="closeChatbot" class="text-white text-2xl font-bold">&times;</button>
-    </div>
-    <div class="flex-1 overflow-auto">
-      <iframe id="chatIframe" src="" class="w-full h-full border-0"></iframe>
-    </div>
+  <div class="fixed bottom-4 right-4 z-50">
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+      createChat({
+        webhookUrl: 'https://nichristandy.app.n8n.cloud/webhook/4a212c7a-639d-4409-8615-01da76441d1b/chat'
+      });
+    </script>
   </div>
 
-  <!-- SCRIPT -->
   <script>
     const burgerIcon = document.getElementById("burger-icon");
     const mobileMenu = document.getElementById("mobile-menu");
-    burgerIcon?.addEventListener("click", () => {
+
+    burgerIcon.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
-    });
-
-    const chatbotFull = document.getElementById('chatbotFull');
-    const openChatbot = document.getElementById('openChatbot');
-    const closeChatbot = document.getElementById('closeChatbot');
-    const chatIframe = document.getElementById('chatIframe');
-
-    openChatbot.addEventListener('click', () => {
-      chatbotFull.classList.remove('hidden');
-      chatIframe.src = 'https://sithki.app.n8n.cloud/webhook/4b83e5c2-911d-4a9e-aa8a-88faf6c4b7d6/chat';
-    });
-
-    closeChatbot.addEventListener('click', () => {
-      chatbotFull.classList.add('hidden');
-      chatIframe.src = '';
     });
   </script>
 
